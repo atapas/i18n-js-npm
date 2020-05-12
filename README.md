@@ -1,6 +1,6 @@
 # i18n-js
 
-`i18n-js` is a simple tool helps in externalizing the strings in a JavaScript based Application. It has the additional capability of parameterizing the strings.
+`i18n-js` is a simple tool helps in externalizing the strings in a JavaScript based Application such that, Internationalization(i18n) can be achieved easily. It has the additional capability of parameterizing the strings to get the dynamic content Internationalized.
 
 # Install
 
@@ -16,9 +16,9 @@ In Software, Internationalization (i18n) is the process to support various local
 All the browsers come with the in-built support of languages which can be used to identify the local language to support for the application.
 
 # How String Externalization help in Internationalization (i18n) of the Web Applications?
-A Web Application may have the need of supporting multiple langiages based on the targeted users. If the Application Strings are Externalized outside of the source files, it is easy and flexible to support i18n.
+A Web Application may have the need of supporting multiple languages based on the targeted users. If the Application Strings are Externalized outside of the source files, it is easy and flexible to support i18n.
 
-Lets consider, all the application strings are in a file called `en.json` and this file can loaded into the application to retrieve the strings from when the app is running in English Language.
+Lets consider, all the application strings are in a file called `en.json` and this file can be loaded into the application to retrieve the strings when the app is running in English Language.
 
 ```js
 {
@@ -28,7 +28,7 @@ Lets consider, all the application strings are in a file called `en.json` and th
 }
 ```
 
-Now there could be equivalent `es.json` file which can be loaded into the appklication when browser supported language is Spanish instead of English.
+Now there could be equivalent `es.json` file which can be loaded into the application when browser supported language is Spanish instead of English.
 
 ```js
 {
@@ -99,12 +99,11 @@ import i18n from 'i18n-js';
 - Use it like:
 
 ```js
-// No parameters. Just Key is passed
+// When no parameters. Just Key is passed
 console.log(i18n('usename'));
 
-// Output: 'User Name' for en and 'Nombre de usuario' for spanish 
+// Output: 'User Name' for English and 'Nombre de usuario' for Spanish 
 // based on the above example.
-
 
 ```
 
@@ -114,8 +113,8 @@ const params = ['Tapas', 'greenroos', 'JavaScript'];
 let hasBlog = i18n('hasBlog', ...params);
 console.log(hasBlog);
 
-// Output: 'Tapas has a blog named, greenroots. This is on JavaScript.' for en and 
-// 'Tapas tiene un blog llamado greenroots. Esto está en {JavaScript.' for spanish 
+// Output: 'Tapas has a blog named, greenroots. This is on JavaScript.' for English and 
+// 'Tapas tiene un blog llamado greenroots. Esto está en {JavaScript.' for Spanish 
 ```
 
 
