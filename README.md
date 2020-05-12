@@ -119,9 +119,11 @@ console.log(hasBlog);
 // 'Tapas tiene un blog llamado greenroots. Esto está en {JavaScript.' for Spanish 
 ```
 
+# Tested with
 
-
-
-
+[<img src="static/angular.png" width="100px" height="100px">](https://angular.io/)
+[<img src="static/react.png" width="100px" height="100px">](https://reactjs.org/)
+[<img src="static/vue.png" width="100px" height="100px">](https://vuejs.org/)
+[<img src="static/browserify.png" width="100px" height="100px">](http://browserify.org/)
 
 
