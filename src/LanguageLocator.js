@@ -29,11 +29,21 @@ const i18n = (key, ...params) => {
     let value = '';
     
     if (Langs[matchedLang]) {
-        value = Langs[matchedLang][key];
+        if (key.indexOf('.') > 0) {
+            // Support nested key
+            value = Langs[matchedLang][key.split('.')[0]][key.split('.')[1]];
+        } else {
+            value = Langs[matchedLang][key];
+        }
     } else {
         // If the user preferred language is not supported,
         // fallback to english('en')
-        value = Langs['en'][key];
+        if (key.indexOf('.') > 0) {
+             // Support nested key
+            value = Langs['en'][key.split('.')[0]][key.split('.')[1]];
+        } else {
+            value = Langs['en'][key];
+        }
     }
 
     let replaced = value;
