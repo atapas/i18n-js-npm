@@ -1,0 +1,19 @@
+{
+  "name": "i18n-js",
+  "version": "0.0.2",
+  "description": "A simple tool helps in externalizing the strings in a JavaScript Application. It has the additional capability of parameterizing the strings.",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atapas/i18n-js-npm.git"
+  },
+  "author": "Tapas Adhikary",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atapas/i18n-js-npm/issues"
+  },
+  "homepage": "https://github.com/atapas/i18n-js-npm#readme"
+}
