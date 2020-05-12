@@ -1,5 +1,5 @@
 {
-  "name": "i18n-js",
+  "name": "i18n-web",
   "version": "0.0.1",
   "description": "A simple tool helps in externalizing the strings in a JavaScript Application. It has the additional capability of parameterizing the strings.",
   "main": "src/main.js",
@@ -10,6 +10,22 @@
     "type": "git",
     "url": "git+https://github.com/atapas/i18n-js-npm.git"
   },
+  "keywords": [
+		"intl",
+		"i18n",
+		"internationalization",
+		"locale",
+		"interpolation",
+		"format",
+		"formatting",
+		"translate",
+    "translation",
+    "javascript",
+    "react",
+    "angular",
+    "vue",
+    "web"
+	],
   "author": "Tapas Adhikary",
   "license": "MIT",
   "bugs": {

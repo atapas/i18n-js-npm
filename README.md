@@ -1,11 +1,11 @@
-# i18n-js
+# i18n-web
 
-`i18n-js` is a simple tool helps in externalizing the strings in a JavaScript based Application such that, Internationalization(i18n) can be achieved easily. It has the additional capability of parameterizing the strings to get the dynamic content Internationalized.
+`i18n-web` is a simple tool helps in externalizing the strings in a JavaScript based Application such that, Internationalization(i18n) can be achieved easily. It has the additional capability of parameterizing the strings to get the dynamic content Internationalized.
 
 # Install
 
-- Using yarn: `yarn add i18n-js`
-- Using npm: `npm install i18n-js`
+- Using yarn: `yarn add i18n-web`
+- Using npm: `npm install i18n-web`
 
 # What is String Externalization?
 String Externalization means, instead of writing the user(or customer) facing strings in source files(.html, .js, .java etc), we keep them in an external file like .properties, .json etc and load from there. This is to help Internationalization (i18n).
@@ -38,11 +38,11 @@ Now there could be equivalent `es.json` file which can be loaded into the applic
 }
 ```
 
-# i18n-js Usage
+# i18n-web Usage
 
 ## Basic Setup and Structure
 
-The tool `i18n-js` helps in externalizing the string and thus, internationalizing your web app with few quick and easy steps.
+The tool `i18n-web` helps in externalizing the string and thus, internationalizing your web app with few quick and easy steps.
 
 - Create a folder called `i18n` at the same lavel of `node_modules` folder of your app.
 - Create `en.js`, `es.js`, `de.js` etc file to contain your application specific strings externalized. You must add all required language .js files that your app would support.
@@ -95,7 +95,7 @@ myapp
 - In your UI Code, import it as,
 
 ```js
-import i18n from 'i18n-js';
+import i18n from 'i18n-web';
 ```
 
 - Use it like:
