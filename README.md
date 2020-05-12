@@ -15,7 +15,108 @@ In Software, Internationalization (i18n) is the process to support various local
 
 All the browsers come with the in-built support of languages which can be used to identify the local language to support for the application.
 
-# How String Externalizations help in Internationalization (i18n) of the Web Applications?
+# How String Externalization help in Internationalization (i18n) of the Web Applications?
+A Web Application may have the need of supporting multiple langiages based on the targeted users. If the Application Strings are Externalized outside of the source files, it is easy and flexible to support i18n.
+
+Lets consider, all the application strings are in a file called `en.json` and this file can loaded into the application to retrieve the strings from when the app is running in English Language.
+
+```js
+{
+    'username': 'User Name',
+    'password': 'Password',
+    'hasBlog': '{0} has a blog named, {1}. This is on {2}.'
+}
+```
+
+Now there could be equivalent `es.json` file which can be loaded into the appklication when browser supported language is Spanish instead of English.
+
+```js
+{
+    'username': 'Nombre de usuario',
+    'password': 'Contraseña',
+    'hasBlog': '{0} tiene un blog llamado {1}. Esto está en {2}.'
+}
+```
+
+# i18n-js Usage
+
+## Basic Setup and Structure
+
+The tool `i18n-js` helps in externalizing the string and thus, internationalizing your web app with few quick and easy steps.
+
+- Create a folder called `i18n` at the same lavel of `node_modules` folder of your app.
+- Create `en.js`, `es.js`, `de.js` etc file to contain your application specific strings externalized. Here is an example of the en.js and es.js file.
+
+```js
+// en.js
+const en = {
+    'username': 'User Name',
+    'password': 'Password',
+    'hasBlog': '{0} has a blog named, {1}. This is on {2}.'
+}
+
+export { en };
+
+```
+
+```js
+// es.js
+const es = {
+    'username': 'Nombre de usuario',
+    'password': 'Contraseña',
+    'hasBlog': '{0} tiene un blog llamado {1}. Esto está en {2}.'
+}
+export { es };
+ ```
+
+- Create another file called, `index.js` where you can aggregate the all modules and export together like this:
+
+```js
+export { en } from './en.js';
+export { xh } from './xh.js';
+export { es } from './es.js';
+```
+
+Example Directory Structure:
+
+```
+myapp                         
+    └── i18n
+        └── en.js
+        └── es.js
+        └── index.js                
+    └── node_modules                    
+```
+
+## Using it in UI Code
+
+- In your UI Code, import it as,
+
+```js
+import i18n from 'i18n-js';
+```
+
+- Use it like:
+
+```js
+// No parameters. Just Key is passed
+console.log(i18n('usename'));
+
+// Output: 'User Name' for en and 'Nombre de usuario' for spanish 
+// based on the above example.
+
+
+```
+
+```js
+// With parameters.
+const params = ['Tapas', 'greenroos', 'JavaScript'];
+let hasBlog = i18n('hasBlog', ...params);
+console.log(hasBlog);
+
+// Output: 'Tapas has a blog named, greenroots. This is on JavaScript.' for en and 
+// 'Tapas tiene un blog llamado greenroots. Esto está en {JavaScript.' for spanish 
+```
 
 
 
