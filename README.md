@@ -58,7 +58,6 @@ const en = {
 }
 
 export { en };
-
 ```
 
 ```js
@@ -68,8 +67,9 @@ const es = {
     'password': 'Contraseña',
     'hasBlog': '{0} tiene un blog llamado {1}. Esto está en {2}.'
 }
+
 export { es };
- ```
+```
 
 - Create another file called, `index.js` where you can aggregate the all modules and export together like this:
 
@@ -85,6 +85,8 @@ myapp
     └── i18n
         └── en.js
         └── es.js
+        └── de.js
+        └── fr.js
         └── index.js                
     └── node_modules                    
 ```
@@ -103,8 +105,11 @@ import i18n from 'i18n-web';
 // When no parameters. Just Key is passed
 console.log(i18n('usename'));
 
-// Output: 'User Name' for English and 'Nombre de usuario' for Spanish 
-// based on the above example.
+// Output: 
+
+// 'User Name' for English 
+
+// 'Nombre de usuario' for Spanish 
 
 ```
 
@@ -114,7 +119,10 @@ const params = ['Tapas', 'greenroos', 'JavaScript'];
 let hasBlog = i18n('hasBlog', ...params);
 console.log(hasBlog);
 
-// Output: 'Tapas has a blog named, greenroots. This is on JavaScript.' for English and 
+// Output: 
+
+// 'Tapas has a blog named, greenroots. This is on JavaScript.' for English and 
+
 // 'Tapas tiene un blog llamado greenroots. Esto está en JavaScript.' for Spanish 
 ```
 
