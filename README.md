@@ -116,7 +116,7 @@ let hasBlog = i18n('hasBlog', ...params);
 console.log(hasBlog);
 
 // Output: 'Tapas has a blog named, greenroots. This is on JavaScript.' for English and 
-// 'Tapas tiene un blog llamado greenroots. Esto está en {JavaScript.' for Spanish 
+// 'Tapas tiene un blog llamado greenroots. Esto está en JavaScript.' for Spanish 
 ```
 
 # Tested with
