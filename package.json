@@ -1,6 +1,6 @@
 {
   "name": "i18n-web",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple tool helps in externalizing the strings in a JavaScript Application. It has the additional capability of parameterizing the strings.",
   "main": "src/main.js",
   "scripts": {
