@@ -44,7 +44,7 @@ Now there could be equivalent `es.json` file which can be loaded into the applic
 
 The tool `i18n-web` helps in externalizing the string and thus, internationalizing your web app with few quick and easy steps.
 
-- Create a folder called `i18n` at the same lavel of `node_modules` folder of your app.
+- Create a folder called `i18n` at the same level of `node_modules` folder of your app.
 - Create `en.js`, `es.js`, `de.js` etc file to contain your application specific strings externalized. You must add all required language .js files that your app would support.
 
 Here is an example of the en.js and es.js file.
